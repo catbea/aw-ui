@@ -1,4 +1,5 @@
 # aw-ui
+<<<<<<< HEAD
 
 > 基于vue的前端组件库
 
@@ -16,3 +17,6 @@ npm run build
 ```
 
 For detailed explanation on how things work, consult the [docs for vue-loader](http://vuejs.github.io/vue-loader).
+=======
+基于vue的前端组件库
+>>>>>>> 21396b94d065ae8028c6efbb7ffa02efae95b551
