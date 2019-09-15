@@ -42,13 +42,14 @@ export default {
 .aw-tag {
   position: relative;
   color: @white;
-  font-size: 10px;
-  line-height: 10px;
-  padding: 3px;
-  border-radius: 1px;
+  font-size: 20px;
+  line-height: 20px;
+  padding: 6px;
+  border-radius: 2px;
   background: #8F9FB1;
   display: inline-block;
-  vertical-align: middle;
+  vertical-align: baseline;
+  transform: scale(0.5);
   &::after {
     border-color: @background-color;
     border-radius: .4em;
