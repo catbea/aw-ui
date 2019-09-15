@@ -16,12 +16,18 @@
       <li><a href="http://vue-loader.vuejs.org/" target="_blank">vue-loader</a></li>
       <li><a href="https://github.com/vuejs/awesome-vue" target="_blank">awesome-vue</a></li>
     </ul>
+    
+    <tag>标签</tag>
   </div>
 </template>
 
 <script>
+import tag from './packages/tag/index.vue';
 export default {
   name: 'app',
+  components:{
+    tag
+  },
   data () {
     return {
       msg: 'Welcome to Your Vue.js App'
@@ -29,8 +35,14 @@ export default {
   }
 }
 </script>
+<style lang="less" scoped>
+  a{
+    color: #666;
+  }
+</style>
 
-<style>
+<style lang='less'>
+@import url(./packages/style/resets.less);
 #app {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
