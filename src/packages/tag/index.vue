@@ -1,5 +1,6 @@
 <template>
   <span class="aw-tag" 
+    :class="b"
     :style="style"
   >
     <slot />
@@ -25,8 +26,47 @@ export default {
     textColor: String
   },
   computed: {
-    style(){
+    b(){
+      let classes = '';
+      if(this.round){
+        classes = 'aw-tag--round ';
+      }
+      if(this.mark){
+        classes += 'aw-tag--mark ';
+      }
+      if(this.plain){
+        classes += 'aw-tag--plain aw-hairline--surround '
+      }
+
+      switch (this.type) {
+        case 'primary':
+          classes += 'aw-tag--primary'
+          break;
+        case 'success':
+          classes += 'aw-tag--success'
+          break;
+        case 'danger':
+          classes += 'aw-tag--danger'
+          break;
+        case 'warning':
+          classes += 'aw-tag--warning'
+          break;
       
+        default:
+          classes += 'aw-tag--default'
+          break;
+      }
+      return classes;
+    },
+    style(){
+      var style = {};
+      if(this.color&&!this.plain){
+        style.backgroundColor = this.color;
+      }
+      if (this.textColor) {
+        style.color = this.textColor;
+      }
+      return style;
     } 
   }
 }
@@ -36,25 +76,40 @@ export default {
 @import url(../index.less);
 .aw-hairline--surround::after{
   border-width: 1px;
-  border-color: @background-color;
-  border-radius: 0.4em;
 }
+
 .aw-tag {
   position: relative;
-  color: @white;
+  color: currentColor;
   font-size: 20px;
   line-height: 20px;
   padding: 6px;
   border-radius: 2px;
-  background: #8F9FB1;
   display: inline-block;
   vertical-align: baseline;
   transform: scale(0.5);
-  &::after {
-    border-color: @background-color;
-    border-radius: .4em;
+  // &::after {
+  //   border-color: @background-color;
+  //   border-radius: .4em;
+  // }
+  &--default{
+    background:rgba(143, 159, 177, 0.15);
   }
-
+  &--primary{
+    background: #1989fa;
+  }
+  &--success{
+    background: #07c160;
+  }
+  &--danger{
+    background: #ee0a24;
+  }
+  &--warning{
+    background: #ff976a;
+  }
+  &--plain{
+    background: #fff;
+  }
   &--mark {
     padding-right: .6em;
     border-radius: 0 .8em .8em 0;
