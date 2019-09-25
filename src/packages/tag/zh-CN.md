@@ -29,3 +29,21 @@ Vue.use(aw-tag);
 <aw-tag color="#ffe1e1" text-color="#ad0000" mark>热卖中</aw-tag>
 
 ```
+
+### API
+
+| 参数 | 说明 | 类型 | 默认值 | 版本 |
+|------|------|------|------|------|
+| type | 类型，可选值为`primary` `success` `danger` | `String` | - | - |
+| size | 大小, 可选值为`large` `medium` | `String` | - | 1.3.8 | 此版本不实现
+| color | 标签颜色 | `String` | - | 1.3.8 |
+| plain | 是否为空心样式 | `Boolean` | `false` | - |
+| round | 是否为圆角样式 | `Boolean` | `false` | 1.3.8 |
+| mark | 是否为标记样式 | `Boolean` | `false` | - |
+| text-color | 文本颜色，优先级高于`color`属性 | `String` | `white` | 1.5.0 |
+
+### Slot
+
+| 名称 | 说明 |
+|------|------|
+| - | 自定义 Tag 显示内容 |
