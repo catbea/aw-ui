@@ -1,7 +1,7 @@
 {
   "name": "aw-ui",
   "description": "基于vue的前端组件库",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "author": "catbea",
   "license": "MIT",
   "main": "dist/build.js",

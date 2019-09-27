@@ -23,5 +23,6 @@ export {
 
 export default {
   version,
-  install
+  install,
+  Tag
 }
