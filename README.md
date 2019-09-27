@@ -19,6 +19,8 @@ For detailed explanation on how things work, consult the [docs for vue-loader](h
 
 ### 使用方法
 ```先导入该组件
+  cnpm i aw-ui -S
+  
   import {Tag} from 'aw-ui'
   注册组件 
   components:{
