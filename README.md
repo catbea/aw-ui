@@ -17,7 +17,7 @@ npm run build
 
 For detailed explanation on how things work, consult the [docs for vue-loader](http://vuejs.github.io/vue-loader).
 
-####使用方法
+### 使用方法
 ```先导入该组件
   import {Tag} from 'aw-ui'
   注册组件 
